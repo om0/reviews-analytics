@@ -13,12 +13,12 @@ for d in data:
 	sum_len += len(d)
 print('留言的平均長度是', sum_len/len(data))
 
-new = []
-for d in data:
-	if len(d) < 100:
-		new.append(d)
-print('一共有', len(new), '筆留言長度小於100')
-#print(new[0])
+# new = []
+# for d in data:
+# 	if len(d) < 100:
+# 		new.append(d)
+# print('一共有', len(new), '筆留言長度小於100')
+# print(new[0])
 
 good = []
 for d  in data:
@@ -26,3 +26,6 @@ for d  in data:
 		good.append(d)
 print('一共有', len(good), '筆提到good')
 print(good[0])
+
+good = [d for d in data if 'good' in d]
+print(len(good))
